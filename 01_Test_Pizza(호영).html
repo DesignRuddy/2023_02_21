@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_Test_Pizza.html </title>
+    <link rel="stylesheet" href="./Css3/Circularstd.css">
+</head>
+<script>
+    function img_pizza_L(name) {
+        var filename = "url('img/"+ name +".jpg)";
+        preview_L.style.backgroundImage = filename ;
+    }
+    function img_pizza_R(name) {
+        var filename = "url('img/"+ name +".jpg)";
+        preview_R.style.backgroundImage = filename ;
+    }
+</script>
+<body>
+    <!-- <h3>01_Test_Pizza.html </h3> -->
+    <header><h1> Hoya's Pizza </h1></header>
+
+    <div>
+    <!-- 헤더  ------------->
+
+
+    <!-- section_1  ------------->
+  
+        <section class="section_01">
+            <fieldset>
+                <legend class="itemtitle">메인 메뉴 &nbsp;</legend>
+
+                    <div id="preview_L" class="relative">
+                        <div id="preview_R" class="absolute"></div>
+                    </div>
+
+                    <select name="Pizza_menu_L" id="Pizza_menu_L" onclick="img_pizza_L(value)">
+                        <option value="Mr.trio">미스터 트리오</option>
+                        <option value="cheese_B_Stk">치즈 블라썸 스테이크</option>
+                        <option value="K_B_Shp_G_Chl">킹브레드 쉬림프 골드 칠리</option>
+                        <option value="K_B_Shp_Gold">킹브레드 쉬림프 골드</option>
+                        <option value="Happienss_Shp">햄벅한 새우</option>
+                    </select>
+
+                    
+                    <select name="Pizza_menu_R" id="Pizza_menu_R" onclick="img_pizza_R(value)">
+                        <option value="Mr.trio">미스터 트리오</option>
+                        <option value="cheese_B_Stk">치즈 블라썸 스테이크</option>
+                        <option value="K_B_Shp_G_Chl">킹브레드 쉬림프 골드 칠리</option>
+                        <option value="K_B_Shp_Gold">킹브레드 쉬림프 골드</option>
+                        <option value="Happienss_Shp">햄벅한 새우</option>
+                    </select>
+            </fieldset>
+        </section>
+
+        <section class="section_02">
+            <fieldset>
+                <legend class="itemtitle">피자사이즈 &nbsp;</legend>
+                    <ul>
+                        <li><input type="radio" name="" id="size_small"> Small</li>
+                        <li><input type="radio" name="" id="size_medium"> Medium</li>
+                        <li><input type="radio" name="" id="size_large"> Large</li>
+                        <li><input type="radio" name="" id="size_super"> Super</li>
+                    </ul>
+            </fieldset>
+        </section>
+
+        
+        <section class="section_03">
+            <fieldset>
+                <legend class="itemtitle"> 토핑선택 &nbsp;</legend>
+                    <ul>
+                        <li><input type="checkbox" name="Menu_bacon" id="Menu_bacon"> Bacon</li>
+                        <li><input type="checkbox" name="Menu_cheese" id="Menu_cheese"> Cheese</li>
+                        <li><input type="checkbox" name="Menu_onion" id="Menu_onion"> Onion</li>
+                        <li><input type="checkbox" name="Menu_mushroom" id="Menu_mushroom"> Mushroom</li>
+                    </ul>
+            </fieldset>
+        </section>
+        <p></p>
+
+        </section>
+    <!-- footer  ------------->
+        <footer class="footer">
+        <b>희망 배송시간</b> 
+            <input type="time" name="" id="" >
+        <p></p>
+
+        <span class="footer_text01">배송시 요청사항 <br>
+            <textarea name="" id="" cols="60" rows="10"></textarea>
+        </span>
+            
+        <p></p>
+
+        <span class="Footer_btn">
+            <input class="Btn_L_01" type="button" name="" id="" value="order">
+            <input class="Btn_R_01" type="reset" value="Cansel">
+        </span>
+        </footer>
+    </div>
+</body>
+
+<style>
+    *{
+        box-sizing: none;
+    }
+    div{
+        font-size: 14pt;
+        border: none;
+        width: 50%;
+        border-radius: 8px;
+        background-color: #FFFFe6;
+        margin-left: 12%;
+        margin-right: 12%;
+
+        margin-bottom: 10%;
+        padding: 3px 50px;
+    }
+    ul{
+        list-style: none;
+        padding: 5% 5%;
+    }
+    header{
+        position: relative;
+        margin-left: 12%;
+        font-size: 20pt;
+    }
+    input[type=tell]:valid{
+        background-color: #ccc
+    }
+    input[type=tell]:invalid{
+        background-color:white;
+    }
+
+    section{
+        padding-top: 15px;
+        width: 100%;
+    }
+    #userInfo{
+        border: 2px solid red;
+        
+    }
+
+
+
+    .section_01 .itemtitle{
+        font-weight: bold;
+    }
+    .section_02 .itemtitle{
+        font-weight: bold;
+    }
+    .section_03 .itemtitle{
+        font-weight: bold;
+    }
+    .footer .footer_text01{
+        text-align: start;
+    }
+    .relative {
+		position: relative;
+		width: 350px;
+		height: 180px;
+		background-image: url('img/bgpizza.jpg'); 
+		background-position: left;
+        
+	}
+	.absolute {
+		position: absolute;
+		right: 0;
+		width: 95px;
+		height: 175px;
+		background-image: url('img/bgpizza.jpg');
+		background-position: right;
+	}
+    
+</style>
+<!--궁금한것을 기입하는 주석입니다.-->
+</html>
